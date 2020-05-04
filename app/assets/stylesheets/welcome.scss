@@ -1,0 +1,27 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.heading_image {
+	margin-top: 70px;
+}
+
+.thanks_for_joining{
+	display: none;
+}
+
+img.confirmation_image {
+  width: 100%;
+}
+.para_text{
+	font-size: 19px;
+  margin-top: 50px;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.col-md-7.image_border{
+	padding-left: 0px;
+	padding-right: 0px;
+}

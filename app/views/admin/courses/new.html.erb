@@ -1,0 +1,17 @@
+<h1> Add course</h1>
+
+<%= form_for @course, url: admin_courses_path(@course) do |f|%>
+	<div class="field">
+	  <%= f.label :Course_title %><br/>
+	  <%= f.text_field :course_title %>
+	</div>
+  <br/>
+	<div class="field">
+		<%= f.label :standard_type %><br/>
+		<%= f.text_field :standard_type %>
+	</div>
+  <br/>
+	<div class="actions">
+    <%= f.submit %>
+  </div>
+<%end%>

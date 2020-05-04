@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KalibreAcademy</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render partial: "layouts/header.html.erb" %>
+  
+    <%= render partial: "layouts/flash_messages.html.erb"%>
+    <%= yield %>
+
+    <script type="text/javascript">
+      setTimeout(function() {
+        $('.automatic_fadeout').hide(5000);
+      }, 3000);
+    </script>
+  </body>
+</html>

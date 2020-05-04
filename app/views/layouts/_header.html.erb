@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Header of Kalibre academy</title>
+</head>
+<body>
+<div class="">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Kalibre Academy</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <%if current_user.present? && current_user.is_admin == true %>
+          <li><%= link_to 'Admin Dashboard', admin_dashboard_index_path%></li>
+          <li><%= link_to 'Add Course', new_admin_course_path%></li>
+          <li><%= link_to 'Add Lecture'%>
+          <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete%></li>
+        <%else%>
+         <li><%= link_to "Sign up", "javascript:;", class: "nav-link", data: {toggle: "modal", target: "#signupModal" } %></li>
+         <li><%= link_to "Log in", "javascript:;", class: "nav-link", data: {toggle: "modal", target: "#loginModal" } %></li>
+        <%end%>
+      </ul>
+    </div>
+  </nav>
+</div>  
+</body>
+</html>
